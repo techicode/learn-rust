@@ -26,8 +26,13 @@ fn main() {
 
     for ticket in all_tickets {
         match ticket {
-
+            Ticket::Backstage(price, owner) => {
+                println!("The price is ${:?} and the owner is {:?}", price, owner)
+            }
+            Ticket::Vip(price, owner) => {
+                println!("The price is ${:?} and the owner is {:?}", price, owner)
+            }
+            Ticket::Standard(price) => println!("The price is ${:?}", price),
         }
-
     }
 }
